@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       saveNewTask: function(newtask){
+// console.log(newtask);
         this.tasks.push({
           name: this.newTask,
-          isCompleted: false
+          isCompleted: false,
+          // priority: newtask.default.radio1
         });
         this.newTask = ""
       },

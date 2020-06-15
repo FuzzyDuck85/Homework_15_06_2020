@@ -38,6 +38,18 @@ li.not-completed {
   border: 2px solid #f2360c;
 }
 
+#high {
+  border: 2px solid pink;
+}
+
+#medium {
+  border: 2px solid orange;
+}
+
+#low {
+  border: 2px solid grey;
+}
+
 input[type="text"] {
   padding: 10px;
   width: 50%;

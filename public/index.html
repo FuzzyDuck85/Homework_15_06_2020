@@ -15,13 +15,25 @@
     <form v-on:submit.prevent="saveNewTask">
       <label for="new-task">Add a new To Do item:</label>
       <input type="text" id="new-task" v-model="newTask">
-      <input type="submit" value="Save New To Do Item">
+      <input id="radio1" name="priority" type="radio" value="High">High</input>
+      <input id="radio2" name="priority" type="radio" value="Medium">Medium</input>
+      <input id="radio3" name="priority" type="radio" value="Low">Low</input>
+      <input type="submit" value="Save">
     </form>
     <br>
     <ul>
       <li v-for="(task, index) in tasks" v-bind:class="task.isCompleted ? 'completed' : 'not-completed'">
-        <span>{{ task.name }}</span>
+        <!-- <span>{{ task.name }}</span> -->
         <span v-if="task.isCompleted">Task Complete!</span>
+        <div v-if="task.priority == 'High'">
+        <span id="high">{{ task.name }}</span>
+        </div>
+        <div v-else-if="task.priority == 'Medium'">
+        <span id="medium">{{ task.name }}</span>
+        </div>
+        <div v-else="task.priority == 'Low'">
+        <span id="low">{{ task.name }}</span>
+        </div>
         <button v-if="!task.isCompleted" v-on:click="completeTask(index)">Mark Complete</button>
       </li>
     </ul>
