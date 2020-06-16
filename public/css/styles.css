@@ -17,7 +17,7 @@ li {
   justify-content: space-between;
 }
 
-li span {
+/* li span {
   padding: 8px;
 }
 
@@ -27,27 +27,29 @@ li button {
   border: none;
   padding: 10px;
   cursor: pointer;
-}
+} */
 
-li.completed {
+/* li.completed {
   border: 2px solid #1a681e;
   color: #1a681e;
 }
 
 li.not-completed {
   border: 2px solid #f2360c;
+} */
+
+li.high {
+  border: 2px solid #red;
+  color: white;
+  background-color: red;
 }
 
-#high {
-  border: 2px solid pink;
-}
-
-#medium {
+li.medium {
   border: 2px solid orange;
 }
 
-#low {
-  border: 2px solid grey;
+li.low {
+  border: 2px solid blue;
 }
 
 input[type="text"] {

@@ -4,24 +4,26 @@ document.addEventListener('DOMContentLoaded', () => {
   new Vue({
     el: "#app",
     data: {
+      title: "ToDo's",
       tasks: [
 
       ],
-      newTask: "",
+      newTask: {
+        name: "",
+        priority: null
+      },
     },
     methods: {
-      saveNewTask: function(newtask){
-// console.log(newtask);
-        this.tasks.push({
-          name: this.newTask,
-          isCompleted: false,
-          // priority: newtask.default.radio1
-        });
-        this.newTask = ""
+      saveNewTask: function(){
+        this.tasks.push(this.newTask);
+        this.newTask = {
+          name: "",
+          priority: null
+        // },
+        // completeTask: function(index){
+        //   this.tasks[index].isCompleted = true;
+        };
       },
-      completeTask: function(index){
-        this.tasks[index].isCompleted = true;
-      }
     }
   });
 });
